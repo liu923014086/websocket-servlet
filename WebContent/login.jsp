@@ -5,14 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<script type="text/javascript"  src="jquery-1.4.4.min.js"></script>
+<script src="./layer-v3.0.3/jquery/jquery-1.8.2.min.js"></script>
+<script src="./layer-v3.0.3/layer/layer.js"></script>
+<link rel="stylesheet" href="//res.layui.com/layui/build/css/layui.css"  media="all">
 </head>
 <body>
 	
-	<form action="LoginServlet" method="post" >
-		用户名：<input name="username"  /><br/>
-		<input type="submit"  />
+	<form action="LoginServlet" class="layui-form" method="post" >
+	 <div class="layui-form-item">
+	    <label class="layui-form-label">单行输入框</label>
+	    <div class="layui-input-block">
+	      <input type="text" name="username" lay-verify="username" autocomplete="off" placeholder="请输入登录名" class="layui-input">
+	    </div>
+	  </div>
+	  
+	  <button class="layui-btn layui-btn-big layui-btn-normal" onclick="login()">登 录</button>
 	</form>
-
+<script type="text/javascript">
+	function login(){
+		//alert();
+	
+	}
+</script>
 </body>
 </html>

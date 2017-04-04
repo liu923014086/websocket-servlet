@@ -5,9 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<script src="./layer-v3.0.3/jquery/jquery-1.8.2.min.js"></script>
-<script src="./layer-v3.0.3/layer/layer.js"></script>
-
+<script type="text/javascript"  src="jquery-1.4.4.min.js"></script>
 
 <script type="text/javascript">
  
@@ -29,7 +27,6 @@
 		 
 		ws.onmessage = function(event){ 
 			eval("var msg="+event.data+";"); 
-			console.info(msg);
 			console.info(msg.usernames);
 			if(undefined!=msg.welcome){
 				$("#content").append(msg.welcome);
@@ -48,7 +45,6 @@
 			} 
 			if(undefined!=content){
 				$("#content").append(msg.content);
-				layerAlert(msg.content);
 			} 
 		}
 	}
@@ -87,18 +83,8 @@
 		$("#msg").val("");
 		 
 	}
-	
-	function layerAlert(msg){
-		layer.open({
-			  title: '在线调试'
-			  ,content: msg
-			});     
-  }
 	 
 </script>
-
-
-
 </head>
 <body>
 
